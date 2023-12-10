@@ -1,29 +1,49 @@
 <template>
-    <div class="intro">
-        <!-- <img src="/images/profile.jpg" alt="Profile picture" style="width: 50%;"> -->
-        <h1>Hey,<br> ich heiße Luca.</h1>
-        <p>Lorem Ipsum.</p>
-    </div>
+    <h1>Hi. I'm Luca. </h1>
+    <p>
+        Welcome to my portfolio of projects and experiments in 
+        <b class="clipped-text text-programming">programming</b>, 
+        <b class="clipped-text text-photography">photography</b> and 
+        <b class="clipped-text text-sound">sound</b>.
+    </p>
 </template>
 
 <style scoped>
-img {
-    filter: grayscale(1);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(117, 117, 117, 1) 37%, rgba(255, 255, 255, 1) 100%);
-}
-
-.intro p {
-    font-size: 35px;
-    text-align: justify;
-}
 
 h1 {
-    font-size: 400%;
-    font-family: 'GothamBold';
+    margin: 0;
+    line-height: 0.75em;
 }
 
+p {
+    margin-top: 0.5em;
+}
+
+.clipped-text {
+    font-family: 'GothamBold';
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-color: white;
+    background-clip: text;
+    background-size: contain;
+    transition: 0.5s;
+}
+
+.clipped-text:hover {
+    filter: invert(1);
+}
+
+.text-programming {
+    background-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(26, 148, 164)
+}
+
+.text-photography {
+    background-image: url(/images/photography.png);
+}
+
+.text-sound {
+    background-image: url(/images/sound.png);
+}
 </style>
-
-<script setup>
-
-</script>

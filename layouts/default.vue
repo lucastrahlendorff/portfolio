@@ -1,9 +1,28 @@
 <template>
-    <div id="main">
-        <Navigation />
-        <slot />
+    <div id="outer">
+        <div id="main">
+            <Navigation />
+            <div class="content">
+                <slot />
+            </div>
+        </div>
     </div>
+    
 </template>
+
+<script setup>
+    import MouseFollower from "mouse-follower";
+    import gsap from "gsap";
+
+    onMounted(() => {
+        // MouseFollower.registerGSAP(gsap);
+        // const cursor = new MouseFollower({
+        //     container: '#outer',
+        //     speed: 0.3
+        // });
+    });
+    
+</script>
 
 <style>
 @font-face {
@@ -21,10 +40,6 @@
     src: URL('/fonts/PlayfairDisplay-VariableFont_wght.ttf');
 }
 
-* {
-    font-size: 20px;
-}
-
 body {
     margin: 0;
     font-family: GothamLight, serif;
@@ -34,7 +49,32 @@ body {
 
 #main {
     display: flex;
+    justify-content: center;
     padding: 75px;
     gap: 175px;
 }
+
+.content {
+    font-size: 4rem;
+    width: 900px;
+    transition: 0.5s;
+}
+
+#main:has(#navbar a:hover) .content {
+    opacity: 0.5;
+    filter: blur(5px);
+}
+
+h1 {
+    font-size: 1.25em;
+    font-family: 'GothamBold';
+}
+
+.mf-cursor {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 100%;
+}
+
 </style>
