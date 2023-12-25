@@ -30,11 +30,18 @@
     src: URL('/fonts/PlayfairDisplay-VariableFont_wght.ttf');
 }
 
+:root {
+  --bg-color: #1b1b1b;
+  --bg-color-secondary: #262626;
+  --text-color: white;
+  --secondary-opacity: 0.5;
+}
+
 body {
     margin: 0;
     font-family: GothamLight, serif;
-    background-color: #1b1b1b;
-    color: white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 #main {
@@ -45,26 +52,27 @@ body {
 }
 
 .content {
-    font-size: 4rem;
+    font-size: 2rem;
     width: 900px;
     transition: 0.5s;
 }
 
+.hero {
+    font-size: 4rem;
+}
+
+.title {
+    margin-top: 0;
+    line-height: 0.75em;
+}
+
 #main:has(#navbar a:hover) .content {
-    opacity: 0.5;
+    opacity: var(--secondary-opacity);
     filter: blur(5px);
 }
 
-h1 {
-    font-size: 1.25em;
+h1, h2, h3 {
     font-family: 'GothamBold';
-}
-
-.mf-cursor {
-    width: 10px;
-    height: 10px;
-    background-color: white;
-    border-radius: 100%;
 }
 
 </style>

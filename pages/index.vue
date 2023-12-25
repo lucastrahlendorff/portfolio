@@ -1,4 +1,5 @@
 <template>
+    <div class="hero">
     <h1>Hi. I'm Luca. </h1>
     <p>
         Welcome to my portfolio of projects and experiments in 
@@ -6,6 +7,8 @@
         <b class="clipped-text text-photography">photography</b> and 
         <b class="clipped-text text-sound">sound</b>.
     </p>
+    </div>
+    
 </template>
 
 <style scoped>
@@ -13,6 +16,7 @@
 h1 {
     margin: 0;
     line-height: 0.75em;
+    font-size: 1.25em;
 }
 
 p {
