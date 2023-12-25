@@ -11,17 +11,7 @@
 </template>
 
 <script setup>
-    import MouseFollower from "mouse-follower";
-    import gsap from "gsap";
 
-    onMounted(() => {
-        // MouseFollower.registerGSAP(gsap);
-        // const cursor = new MouseFollower({
-        //     container: '#outer',
-        //     speed: 0.3
-        // });
-    });
-    
 </script>
 
 <style>
