@@ -45,6 +45,10 @@ body {
 }
 
 #main {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     padding: 75px;
@@ -55,6 +59,7 @@ body {
     font-size: 2rem;
     width: 900px;
     transition: 0.5s;
+    overflow-y: auto;
 }
 
 .hero {
