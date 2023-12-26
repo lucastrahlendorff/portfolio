@@ -60,6 +60,7 @@ body {
     width: 900px;
     transition: 0.5s;
     overflow-y: auto;
+    padding-right: 1em;
 }
 
 .hero {
@@ -78,6 +79,35 @@ body {
 
 h1, h2, h3 {
     font-family: 'GothamBold';
+}
+
+a {
+    color: inherit;
+}
+
+article img {
+  max-width: 100%;
+}
+
+/* Scrollbar */
+
+html {
+  --scrollbarBG: #0098d9;
+  --thumbBG: #90A4AE;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-color-secondary) #00000000;
+}
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--bg-color-secondary) ;
+  border-radius: 5px;
 }
 
 </style>
