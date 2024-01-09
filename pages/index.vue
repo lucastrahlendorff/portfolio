@@ -7,6 +7,7 @@
         <b class="clipped-text text-photography">photography</b> and 
         <b class="clipped-text text-sound">sound</b>.
     </p>
+    <span class="small">Hey! This site is still under development, so if anything isn't working, <a href="mailto:luca.strahlendorff@outlook.de">let me know</a>.</span>
     </div>
     
 </template>
@@ -15,7 +16,7 @@
 
 h1 {
     margin: 0;
-    line-height: 0.75em;
+    line-height: 1em;
     font-size: 1.25em;
 }
 
@@ -49,5 +50,16 @@ p {
 
 .text-sound {
     background-image: url(/images/sound.png);
+}
+
+.small {
+    font-size: 0.25em;
+    opacity: 0.5;
+}
+
+@media only screen and (max-width: 600px) {
+  .small {
+    font-size: 1rem;
+  }
 }
 </style>

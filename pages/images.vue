@@ -1,6 +1,6 @@
 <template>
-    <h1 class="title">Photography</h1>
-    <p>I like shooting pictures. <br>Like it? See more on <a href="https://www.instagram.com/lucastrahlendorff/" target="_blank">Instagram</a>.</p>
+    <h1 class="title">Photo&ZeroWidthSpace;graphy</h1>
+    <p>Shooting pictures. <br>Like it? See more on <a href="https://www.instagram.com/lucastrahlendorff/" target="_blank">Instagram</a>.</p>
     <div class="masonry">
         <div class="column">
             <NuxtImg src="/images/photography/1.jpg" width="300px" />
@@ -30,8 +30,16 @@
         overflow: hidden;
     }
 
-    .masonry:has(img:hover) img:not(:hover) {
-        filter: blur(2px);
+    @media only screen and (max-width: 600px) {
+        .masonry {
+            --gap: 0;
+        }
+    }
+
+     @media only screen and (min-width: 601px) {
+        .masonry:has(img:hover) img:not(:hover) {
+            filter: blur(2px);
+        }
     }
 
     .column {

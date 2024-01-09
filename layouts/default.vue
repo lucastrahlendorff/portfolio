@@ -35,6 +35,7 @@
   --bg-color-secondary: #262626;
   --text-color: white;
   --secondary-opacity: 0.5;
+  --breakpoint-mobile: 600px;
 }
 
 body {
@@ -54,6 +55,14 @@ body {
     padding: 75px;
     padding-bottom: 0;
     gap: 175px;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1060px) {
+  #main {
+    padding: 25px;
+    display: block;
+  }
 }
 
 .content {
@@ -64,19 +73,44 @@ body {
     padding-right: 1em;
 }
 
+@media only screen and (max-width: 1060px) {
+  .content {
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .hero {
     font-size: 4rem;
+}
+
+@media only screen and (max-width: 1060px) {
+  .hero {
+    font-size: 2.25rem;
+  }
 }
 
 .title {
     margin-top: 0;
     line-height: 0.75em;
+    hyphens: auto;
 }
 
-#main:has(#navbar a:hover) .content {
+@media only screen and (max-width: 1060px) { 
+  .title {
+    line-height: 1em;
+  }
+}
+
+@media only screen and (min-width: 1061px) {
+  #main:has(#navbar a:hover) .content {
     opacity: var(--secondary-opacity);
     filter: blur(5px);
+  }
 }
+
+
 
 h1, h2, h3 {
     font-family: 'GothamBold';
@@ -109,6 +143,71 @@ html {
 ::-webkit-scrollbar-thumb {
   background-color: var(--bg-color-secondary) ;
   border-radius: 5px;
+}
+
+/* Icons */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/fonts/icons.woff?ukjio7') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-headphones:before {
+  content: "\e910";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-bubble:before {
+  content: "\e96b";
+}
+.icon-contrast:before {
+  content: "\e9d5";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-soundcloud:before {
+  content: "\eac3";
+}
+.icon-soundcloud2:before {
+  content: "\eac4";
+}
+.icon-xing:before {
+  content: "\ead3";
+}
+.icon-xing2:before {
+  content: "\ead4";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
 }
 
 </style>
