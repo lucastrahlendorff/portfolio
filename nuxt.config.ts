@@ -4,5 +4,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
     '@nuxt/image',
-  ]
+    '@nuxtjs/sitemap',
+  ],
+  site: {
+    url: 'https://luca-strahlendorff.de',
+  },
 })
