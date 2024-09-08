@@ -20,38 +20,3 @@
         </div>
     </div>
 </template>
-
-<style scoped>
-    .masonry {
-        --gap: 1em;
-        display: flex;
-        gap: var(--gap);
-        width: 100%;
-        overflow: hidden;
-    }
-
-    @media only screen and (max-width: 600px) {
-        .masonry {
-            --gap: 0;
-        }
-    }
-
-     @media only screen and (min-width: 601px) {
-        .masonry:has(img:hover) img:not(:hover) {
-            filter: blur(2px);
-        }
-    }
-
-    .column {
-        line-height: 0;
-        flex: 1 1 0px;
-    }
-
-    .column img {
-        width: 100%;
-        height: auto;
-        margin-bottom: var(--gap);
-        transition: 1s;
-    }
-
-</style>
